@@ -41,7 +41,7 @@ public class PacketDriverLayer extends BaseLayer {
       int timeout = 1 * 1000;
 
       adapterObject = Pcap.openLive(adapterList.get(iNumberAdapter).getName(), snaplength, flags, timeout,
-            errorBuffer);
+              errorBuffer);
 
    }
 
@@ -52,10 +52,10 @@ public class PacketDriverLayer extends BaseLayer {
    }
 
    public void setAdapterList() {
-         int r = Pcap.findAllDevs(adapterList, errorBuffer);
+      int r = Pcap.findAllDevs(adapterList, errorBuffer);
 
       if (r == Pcap.NOT_OK || adapterList.isEmpty())
-         System.out.println("[Error] ³×Æ®¿öÅ© ¾î´ğÅÍ¸¦ ÀĞÁö ¸øÇÏ¿´½À´Ï´Ù. Error : " + errorBuffer.toString());
+         System.out.println("[Error] ë„¤íŠ¸ì›Œí¬ ì–´ëŒ‘í„°ë¥¼ ì½ì§€ ëª»í•˜ì˜€ìŠµë‹ˆë‹¤. Error : " + errorBuffer.toString());
    }
 
    public ArrayList<PcapIf> getAdapterList() {
